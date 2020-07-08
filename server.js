@@ -6,8 +6,7 @@ app.use(express.json());
 
 
 
-const MongoClient = require('mongodb').MongoClient;
-const uri = "mongodb+srv://root:storyfx@cluster0.isjic.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const uri = "mongodb+srv://storyfx:storyfx@cluster0.isjic.mongodb.net/storyfx?retryWrites=true&w=majority";
 mongoose.connect(uri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
