@@ -53,10 +53,8 @@ mongoose.connect(uri, {
   })
   .catch(err => console.log(err))
 
-const usersRouter = require('./backend/routes/users');
-app.use('/users', usersRouter);
-  
 
-app.listen(5000, () => {
+
+app.listen(3000, () => {
   console.log('server is running on port: 5000');
 });
