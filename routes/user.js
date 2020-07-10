@@ -22,6 +22,11 @@ router.route('/signup')
         user.email = req.body.email;
         user.photo = user.gravatar();
         user.password = req.body.password;
+        user.Instagram=req.body.Instagram
+        user.Behance=req.body.Behance
+        user.Linkedin=req.body.Linkedin
+        user.Wordpress=req.body.Wordpress
+        user.Other=req.body.Other
         user.save(function(err) {
           if (err) return next(err);
           req.logIn(user, function(err) {

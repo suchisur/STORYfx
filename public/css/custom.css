@@ -65,7 +65,7 @@ select {
 }
 
 .hero {
-	background: url('/img/threely-photo.jpeg') no-repeat center center fixed;
+	background: url('/img/d.jpg') no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -75,8 +75,8 @@ select {
 }
 
 .hero-heading {
-	color: #fff;
-	margin-top: 100px;
+	color:white;
+	margin-top: 150px;
 	font-size: 37px;
 	font-weight: 600;
 	text-shadow: 1px 1px 1px #000;

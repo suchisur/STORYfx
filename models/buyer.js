@@ -1,20 +1,14 @@
+
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 const crypto = require('crypto');
 const Schema = mongoose.Schema;
 
-const UserSchema = new Schema({
+const BuyerSchema = new Schema({
   email: { type: String, unique: true, lowercase: true},
   name: String,
   password: String,
-  contact_num: String,
-  photo: String,
-  about: String,
-  Instagram : String,
-  Behance: String,
-  Linkedin:String,
-  Wordpress : String,
-  Other : String,
+  contact_num:String,
   gigs: [{
      type: Schema.Types.ObjectId, ref: 'Gig'
   }]
@@ -48,4 +42,4 @@ UserSchema.methods.gravatar = function(size) {
   return 'https://gravatar.com/avatar/' + md5 + '?s=' + size + '&d=retro';
 };
 
-module.exports = mongoose.model('User', UserSchema);
+module.exports = mongoose.model('Buyer', BuyerSchema);
