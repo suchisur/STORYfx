@@ -21,22 +21,15 @@
 
 
         <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Selling
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">
+            Artist
           </a>
           <ul class="dropdown-menu">
             <li><a href="/users/{{ user._id }}/manage_orders">Orders</a></li>
             <li><a href="/my-gigs">Gigs</a></li>
           </ul>
         </li>
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-            Buying
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="/users/{{ user._id }}/orders">Orders</a></li>
-          </ul>
-        </li>
+    
 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -50,12 +43,30 @@
         </li>
 
         {{else }}
-        <li><a href="/login">Sign In</a></li>
-        <li>
-                <p class="navbar-btn">
-                    <a href="/signup" class="btn btn-success">Join</a>
-                </p>
-            </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true" >
+            Hire
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="/users/{{ user._id }}/orders">Orders</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="btn btn-success" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true" >
+            Are you an Artist?
+          </a>
+          <ul class="dropdown-menu">
+          <li><a href="/login">Sign In</a>
+
+              
+                    <a href="/signup" > Join us</a>
+                
+          </li>
+        <li></ul>
+        </li>
+       
+      
+            
         {{/if}}
       </ul>
     </div><!-- /.navbar-collapse -->
